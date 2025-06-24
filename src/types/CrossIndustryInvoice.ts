@@ -1,7 +1,7 @@
 export interface CrossIndustryInvoice {
-  exchangedDocumentContext: ExchangedDocumentContext;
-  exchangedDocument: ExchangedDocument;
-  supplyChainTradeTransaction: SupplyChainTradeTransaction;
+  exchangedDocumentContext: ExchangedDocumentContext
+  exchangedDocument: ExchangedDocument
+  supplyChainTradeTransaction: SupplyChainTradeTransaction
 }
 
 export interface ExchangedDocumentContext {

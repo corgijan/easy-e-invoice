@@ -1,8 +1,6 @@
-import { EInvoice } from '../src/types/Einvoice'
-import {
-  generateCrossIndustryInvoiceXml,
-  simpleConvertEInvoiceToCII,
-} from '../src'
+import { generateCrossIndustryInvoiceXml } from '../src/generateCrossIndustryInvoiceXml'
+import {EInvoice} from "../src/types/convertEInvoiceToCII";
+import {simpleConvertEInvoiceToCII} from "../src/simpleConvertEInvoiceToCII";
 
 test('simpleEInvoiceTest', () => {
   const fullprice = 100 // Assuming a static full price, might need to be dynamic
@@ -57,7 +55,7 @@ test('simpleEInvoiceTest', () => {
     },
     taxTotal: {
       taxAmount: fullprice * tax_amount, // Assuming no tax for simplicity, adjust as needed
-      taxPercentage: tax_amount , // Assuming no tax for simplicity, adjust as needed}
+      taxPercentage: tax_amount, // Assuming no tax for simplicity, adjust as needed}
     },
   }
   // if you read that validate at https://www.epoconsulting.com/einvoice-sap/e-rechnung-viewer
