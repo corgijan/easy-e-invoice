@@ -1,4 +1,6 @@
 # Easy E-Invoice
+XRechnung is a standardized electronic invoice format developed to comply with the European Directive 2014/55/EU, which mandates electronic invoicing in public procurement. It is primarily used in Germany, but it adheres to EU-wide guidelines for electronic invoicing.
+``BETA BEWARE``
 
 This package allows you to easily create E-Invocies that are ready to be used in EU countries.
 
