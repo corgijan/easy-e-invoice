@@ -3,7 +3,7 @@ export interface EInvoice {
   issueDate: string
   dueDate?: string // optional
   currency: string
-  totalAmount: number
+  totalNetPrice: number
   supplier: {
     name: string
     country: string

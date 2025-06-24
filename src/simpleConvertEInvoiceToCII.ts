@@ -169,7 +169,7 @@ export function simpleConvertEInvoiceToCII(
       categoryCode: 'S',
       rateApplicablePercent: inv.taxTotal.taxPercentage.toString(),
       calculatedAmount: inv.taxTotal.taxAmount.toString(),
-      basisAmount: inv.totalAmount.toString(),
+      basisAmount: inv.totalNetPrice.toString(),
     } as TradeTax,
     billingSpecifiedPeriod: {
       startDateTime: { format: '102', value: inv.issueDate },
@@ -179,12 +179,12 @@ export function simpleConvertEInvoiceToCII(
       description: 'Due upon receipt',
     } as PaymentTerms,
     specifiedTradeSettlementHeaderMonetarySummation: {
-      lineTotalAmount: inv.taxTotal.taxAmount.toString(),
-      taxBasisTotalAmount: inv.totalAmount.toString(),
+      lineTotalAmount: inv.totalNetPrice.toString(),
+      taxBasisTotalAmount: inv.totalNetPrice.toString(),
       taxTotalAmount: inv.taxTotal.taxAmount.toString(),
       taxTotalCurrencyID: inv.currency || 'EUR',
-      grandTotalAmount: (inv.totalAmount + inv.taxTotal.taxAmount).toString(),
-      duePayableAmount: (inv.totalAmount + inv.taxTotal.taxAmount).toString(),
+      grandTotalAmount: (inv.totalNetPrice + inv.taxTotal.taxAmount).toString(),
+      duePayableAmount: (inv.totalNetPrice + inv.taxTotal.taxAmount).toString(),
     } as HeaderMonetarySummation,
   }
   // 6. Assemble

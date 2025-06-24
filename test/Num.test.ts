@@ -3,8 +3,8 @@ import {EInvoice} from "../src/types/convertEInvoiceToCII";
 import {simpleConvertEInvoiceToCII} from "../src/simpleConvertEInvoiceToCII";
 
 test('simpleEInvoiceTest', () => {
-  const fullprice = 100 // Assuming a static full price, might need to be dynamic
-  const tax_amount = 0.19
+  const fullNetPrice = 100 // Assuming a static full price, might need to be dynamic
+  const tax_amount = 1.19
 
   const supplier = {
     name: 'Musterfirma GmbH',
@@ -40,7 +40,7 @@ test('simpleEInvoiceTest', () => {
     id: '1234567890', // Assuming a static ID, might need to be dynamic
     issueDate: '20200201',
     currency: 'EUR',
-    totalAmount: fullprice,
+    totalNetPrice: fullNetPrice,
     supplier: supplier,
     customer: customer,
     lineItems: items,
@@ -54,8 +54,8 @@ test('simpleEInvoiceTest', () => {
       },
     },
     taxTotal: {
-      taxAmount: fullprice * tax_amount, // Assuming no tax for simplicity, adjust as needed
-      taxPercentage: tax_amount, // Assuming no tax for simplicity, adjust as needed}
+      taxAmount: (fullNetPrice * 1.19)-fullNetPrice, // Assuming no tax for simplicity, adjust as needed
+      taxPercentage:0.19, // Assuming no tax for simplicity, adjust as needed}
     },
   }
   // if you read that validate at https://www.epoconsulting.com/einvoice-sap/e-rechnung-viewer
