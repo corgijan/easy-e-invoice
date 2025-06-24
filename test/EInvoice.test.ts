@@ -1,10 +1,11 @@
 import { generateCrossIndustryInvoiceXml } from '../src/generateCrossIndustryInvoiceXml'
 import {EInvoice} from "../src/types/convertEInvoiceToCII";
 import {simpleConvertEInvoiceToCII} from "../src/simpleConvertEInvoiceToCII";
+import {generateEInvoiceXML} from "../src";
 
 test('simpleEInvoiceTest', () => {
   const fullNetPrice = 100 // Assuming a static full price, might need to be dynamic
-  const tax_amount = 1.19
+  const tax_amount = 0.19
 
   const supplier = {
     name: 'Musterfirma GmbH',
@@ -54,13 +55,11 @@ test('simpleEInvoiceTest', () => {
       },
     },
     taxTotal: {
-      taxAmount: (fullNetPrice * 1.19)-fullNetPrice, // Assuming no tax for simplicity, adjust as needed
-      taxPercentage:0.19, // Assuming no tax for simplicity, adjust as needed}
+      taxAmount: (fullNetPrice * (1+tax_amount))-fullNetPrice, // Assuming no tax for simplicity, adjust as needed
+      taxPercentage:tax_amount, // Assuming no tax for simplicity, adjust as needed}
     },
   }
+  let result_xml = generateEInvoiceXML(einvoice)
   // if you read that validate at https://www.epoconsulting.com/einvoice-sap/e-rechnung-viewer
-  let result_xml = generateCrossIndustryInvoiceXml(
-    simpleConvertEInvoiceToCII(einvoice)
-  )
   console.log(result_xml)
 })
