@@ -10,8 +10,6 @@ This package allows you to easily create E-Invocies that are ready to be used in
 
 ## Development
 
-### Use as a template
-
 ### Set up tools and environment
 
 You need to have [Node.js](https://nodejs.org/en/download/) installed. Node includes npm as its default package manager.
