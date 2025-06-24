@@ -40,7 +40,7 @@ test('simpleEInvoiceTest', () => {
     id: '1234567890', // Assuming a static ID, might need to be dynamic
     issueDate: '20200201',
     currency: 'EUR',
-    totalAmount: fullprice * 0.81,
+    totalAmount: fullprice,
     supplier: supplier,
     customer: customer,
     lineItems: items,
