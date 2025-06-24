@@ -30,3 +30,6 @@ npm run test
 
 Look at the tests for now. Proper examples will follow here.
 You can use the very simple `EInvoice` interface to create an invoice:
+
+`This was created during a hackergarten.net event in Dortmund, Germany.`
+
