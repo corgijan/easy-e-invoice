@@ -1,10 +1,10 @@
-import { ERechnung } from '../src'
+import { EInvoice } from '../src/types/Einvoice'
 import {
   generateCrossIndustryInvoiceXml,
-  simpleConvertERechnungToCII,
+  simpleConvertEInvoiceToCII,
 } from '../src'
 
-test('simpleERechnungTest', () => {
+test('simpleEInvoiceTest', () => {
   const fullprice = 100 // Assuming a static full price, might need to be dynamic
   const tax_amount = 0.19
 
@@ -38,7 +38,7 @@ test('simpleERechnungTest', () => {
     },
   ]
 
-  const erechnung: ERechnung = {
+  const einvoice: EInvoice = {
     id: '1234567890', // Assuming a static ID, might need to be dynamic
     issueDate: '20200201',
     currency: 'EUR',
@@ -60,9 +60,9 @@ test('simpleERechnungTest', () => {
       taxPercentage: tax_amount , // Assuming no tax for simplicity, adjust as needed}
     },
   }
-  // if you read that validate at https://www.epoconsulting.com/erechnung-sap/e-rechnung-viewer
+  // if you read that validate at https://www.epoconsulting.com/einvoice-sap/e-rechnung-viewer
   let result_xml = generateCrossIndustryInvoiceXml(
-    simpleConvertERechnungToCII(erechnung)
+    simpleConvertEInvoiceToCII(einvoice)
   )
   console.log(result_xml)
 })
