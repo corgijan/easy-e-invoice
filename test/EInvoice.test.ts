@@ -61,6 +61,5 @@ test('simpleEInvoiceTest', () => {
   }
   let result_xml = generateEInvoiceXML(einvoice)
   // if you read that validate at https://www.epoconsulting.com/einvoice-sap/e-rechnung-viewer
-  // for reference https://www.tuv.com/content-media-files/germany/corporate_communication/e-invoice/beispiel-xrechnung-cii.xml
   console.log(result_xml)
 })
