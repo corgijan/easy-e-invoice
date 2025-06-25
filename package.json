@@ -1,5 +1,5 @@
 {
-  "name": "easy-e-invoice",
+  "name": "easy-einvoice",
   "version": "0.0.1",
   "description": "Easy invoice XRechnung is a standardized electronic invoice format developed to comply with the European Directive 2014/55/EU",
   "main": "dist/cjs/index.js",
@@ -33,7 +33,11 @@
     "erechnung",
     "e-rechnung",
     "xrechnung",
-    "x-rechnung"
+    "x-rechnung",
+    "easy-e-invoice",
+    "e-invoice,",
+    "xrechnung-generator",
+    "zugferd-generator"
   ],
   "author": "corgijan",
   "license": "MIT",
