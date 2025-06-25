@@ -37,3 +37,8 @@ You can use the very simple `EInvoice` interface to create an invoice:
 
 `This was created during a hackergarten.net event in Dortmund, Germany.`
 
+> Validating your results:
+>  Visualize your ERechnung at https://www.epoconsulting.com/einvoice-sap/e-rechnung-viewer
+> for reference https://www.tuv.com/content-media-files/germany/corporate_communication/e-invoice/beispiel-xrechnung-cii.xml
+> Validate it at https://validator.invoice-portal.de/
+
