@@ -1,4 +1,4 @@
-# Easy E-Invoicea
+# Easy E-Invoice
 https://www.npmjs.com/package/easy-e-invoice
 > why is this so bad to search ? 
 
